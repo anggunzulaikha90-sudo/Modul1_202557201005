@@ -14,6 +14,12 @@ public class StringData {
 "\n085646668992", "\nTrenggalek"}, {"PONIRAN", "\n085646668999",
 "\nBojonegoro"}};
       
-      System.out.println(identitas[0][1]);
+        System.out.println("NAMA\tALAMAT\tTELEPON");
+        
+        for (int a = 0; a < identitas.length; a++){
+            System.out.println(identitas[a][0] + "\t" + identitas[a][1] + "\t" + identitas[a][2]);
+        
+        }
+        
     }
 }
