@@ -51,7 +51,8 @@ public class Modul1_202557201005 {
 
                 }
             }
-
+        }
+       {
             String wadahNilaiBaru = JOptionPane.showInputDialog("Nilai ditemukan di : " + alamatIndex + "Mau diganti berapa? ");
             int nilaiBaru = Integer.parseInt(wadahNilaiBaru);
             for (int f = 0; f < data.length; f++) {
