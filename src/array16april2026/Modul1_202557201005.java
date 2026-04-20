@@ -55,7 +55,7 @@ public class Modul1_202557201005 {
                 }
             }
         }
-        if (!ketemu){
+        if (!ketemu){//jika nilai tidak ditemukan
             JOptionPane.showMessageDialog(null, "Nilai tidak ditemukan!");
         }
         // Perubahan Array
