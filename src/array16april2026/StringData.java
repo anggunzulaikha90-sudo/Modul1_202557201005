@@ -14,6 +14,7 @@ public class StringData {
          String identitas [][]= {{"ABDUL","Kediri","\t085646668991"} ,{"KUSNO",
 "Trenggalek", "085646668992"}, {"PONIRAN", "Bojonegoro",
 "085646668999"}};
+        
          
          System.out.println("NAMA\tALAMAT\t\tTELEPON");
          
