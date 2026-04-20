@@ -3,7 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package array16april2026;
+
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author ANGGUN Z
@@ -15,74 +17,78 @@ public class Modul1_202557201005 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int data [][] = {{4,6,4,2,8,4,2,10},{4,6,4,2,8,4,2,10}};
+        int data[][] = {{4, 6, 4, 2, 8, 4, 2, 10}, {4, 6, 4, 2, 8, 4, 2, 10}};
         System.out.println("Isi Array: ");
-        for (int a = 0; a < data.length; a++){
-            for(int b = 0; b < data[0].length; b++){
-            System.out.print(data[a][b] + " ");
-            }
-            System.out.println();
-        }
-        
-        // Nilai Rata-rata array
-        int total = 0;
-        int jumlahElemen = 0;
-        for (int a = 0; a < data.length; a++)
-            for (int b = 0; b < data[0].length; b++){
-                total += data [a][b];
-                jumlahElemen++;
-            }
-        double rataRata = (double) total/jumlahElemen;
-        System.out.println("\n--- Hasil Perhitungan ---");
-        System.out.println("Rata-rata: " + rataRata);
-        
-        
-        
-        
-        //Cari index
-        int angkaCari = Integer.parseInt(JOptionPane.showInputDialog("Masukkan angka yang mau dicari di array: "));
-        
-        boolean ketemu = false;
-        for (int a = 0; a<data.length; a++){
-            for (int b = 0; b < data[0].length; b++){
-                if (data[a][b] == angkaCari) {
-                ketemu = true;
-                
-                int nilaiBaru = Integer.parseInt(
-                    JOptionPane.showInputDialog("Nilai ditemukan di [" + a +"][" + b + "], ganti dengan: "));
-                
-                data[a][b] = nilaiBaru;
-                }
-            }
-        }
-        if (!ketemu){//jika nilai tidak ditemukan
-            JOptionPane.showMessageDialog(null, "Nilai tidak ditemukan!");
-        }
-        // Perubahan Array
-        System.out.println("\nArray setelah perubahan: ");
-        for (int a = 0; a < data.length; a++){
-            for (int b = 0; b < data[0].length; b++){
+        for (int a = 0; a < data.length; a++) {
+            for (int b = 0; b < data[0].length; b++) {
                 System.out.print(data[a][b] + " ");
             }
             System.out.println();
         }
-        
-        // Jumlah Kolom Ganjil
-        int jumlahGanjil = 0;
-        for (int a = 0; a < data.length; a++){
-            for (int b = 0; b < data[0].length; b++){
-                if(b % 2 != 0){
-                    jumlahGanjil += data[a][b];
-                }
+
+        // Nilai Rata-rata array
+        int total = 0;
+        int jumlahElemen = 0;
+        for (int a = 0; a < data.length; a++) {
+            for (int b = 0; b < data[0].length; b++) {
+                total += data[a][b];
+                jumlahElemen++;
             }
         }
-        System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil);
-        
-        
-    }
-    
-    
-    }
-    
-    
+        double rataRata = (double) total / jumlahElemen;
+        System.out.println("\n--- Hasil Perhitungan ---");
+        System.out.println("Rata-rata: " + rataRata);
 
+        //Cari index
+        int angkaCari = Integer.parseInt(JOptionPane.showInputDialog("Masukkan angka yang mau dicari di array: "));
+        String alamatIndex = "";
+        boolean ketemu = false;
+        for (int a = 0; a < data.length; a++) {
+            for (int b = 0; b < data[0].length; b++) {
+                if (data[a][b] == angkaCari) {
+                    ketemu = true;
+                    alamatIndex += "[" + a + "][" + b + "]\n";
+
+                }
+            }
+
+            String wadahNilaiBaru = JOptionPane.showInputDialog("Nilai ditemukan di : " + alamatIndex + "Mau diganti berapa? ");
+            int nilaiBaru = Integer.parseInt(wadahNilaiBaru);
+            for (int f = 0; f < data.length; f++) {
+                for (int b = 0; b < data[0].length; b++) {
+                    if (data[f][b] == angkaCari) {
+                        ketemu = true;
+
+                        data[f][b] = nilaiBaru;
+                    }
+                }
+            }
+
+            if (!ketemu) {//jika nilai tidak ditemukan
+                JOptionPane.showMessageDialog(null, "Nilai tidak ditemukan!");
+            }
+            // Perubahan Array
+            System.out.println("\nArray setelah perubahan: ");
+            for (int k = 0; k < data.length; k++) {
+                for (int b = 0; b < data[0].length; b++) {
+                    System.out.print(data[k][b] + " ");
+                }
+                System.out.println();
+            }
+
+            // Jumlah Kolom Ganjil
+            int jumlahGanjil = 0;
+            for (int m = 0; m < data.length; m++) {
+                for (int b = 0; b < data[0].length; b++) {
+                    if (b % 2 != 0) {
+                        jumlahGanjil += data[m][b];
+                    }
+                }
+
+                System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil);
+
+            }
+
+        }
+    }
+}
