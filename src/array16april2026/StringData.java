@@ -12,7 +12,7 @@ public class StringData {
      public static void main(String[] args) {
         // TODO code application logic here
         
-         String identitas [][]= {{"ABDUL","Kediri","\t085646668991"} ,{"KUSNO",
+        String identitas [][]= {{"ABDUL","Kediri","\t085646668991"} ,{"KUSNO",
 "Trenggalek", "085646668992"}, {"PONIRAN", "Bojonegoro",
 "085646668999"}};
         
