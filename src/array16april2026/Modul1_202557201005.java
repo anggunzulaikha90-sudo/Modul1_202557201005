@@ -62,7 +62,7 @@ public class Modul1_202557201005 {
         System.out.println("\nArray setelah perubahan: ");
         for (int a = 0; a < data.length; a++){
             for (int b = 0; b < data[0].length; b++){
-                System.out.println(data[a][b] + " ");
+                System.out.print(data[a][b] + " ");
             }
             System.out.println();
         }
