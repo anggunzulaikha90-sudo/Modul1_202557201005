@@ -29,10 +29,14 @@ public class Modul1_202557201005 {
         // Nilai Rata-rata array
         int total = 0;
         int jumlahElemen = 0;
+        double jumlahGanjil1=0;
         for (int a = 0; a < data.length; a++) {
             for (int b = 0; b < data[0].length; b++) {
                 total += data[a][b];
                 jumlahElemen++;
+                if (b %2!=0) {
+                        jumlahGanjil1=jumlahGanjil1+data[a][b];
+                    }
             }
         }
         double rataRata = (double) total / jumlahElemen;
@@ -55,12 +59,12 @@ public class Modul1_202557201005 {
        {
             String wadahNilaiBaru = JOptionPane.showInputDialog("Nilai ditemukan di : " + alamatIndex + "Mau diganti berapa? ");
             int nilaiBaru = Integer.parseInt(wadahNilaiBaru);
-            for (int f = 0; f < data.length; f++) {
+            for (int a = 0; a < data.length; a++) {
                 for (int b = 0; b < data[0].length; b++) {
-                    if (data[f][b] == angkaCari) {
+                    if (data[a][b] == angkaCari) {
                         ketemu = true;
 
-                        data[f][b] = nilaiBaru;
+                        data[a][b] = nilaiBaru;
                     }
                 }
             }
@@ -70,25 +74,21 @@ public class Modul1_202557201005 {
             }
             // Perubahan Array
             System.out.println("\nArray setelah perubahan: ");
-            for (int k = 0; k < data.length; k++) {
+            for (int a = 0; a < data.length; a++) {
                 for (int b = 0; b < data[0].length; b++) {
-                    System.out.print(data[k][b] + " ");
+                    System.out.print(data[a][b] + " ");
                 }
                 System.out.println();
             }
 
             // Jumlah Kolom Ganjil
-            int jumlahGanjil = 0;
-            for (int m = 0; m < data.length; m++) {
-                for (int b = 0; b < data[0].length; b++) {
-                    if (b % 2 != 0) {
-                        jumlahGanjil += data[m][b];
-                    }
-                }
-
-                
+//            int jumlahGanjil1 = 0;
+//            for (int a = 0; a < data.length; a++) {
+//                for (int b = 0; b < data[0].length; b++) {
+//                    
+//                }
+//            }
+            System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil1);                
             }
-            System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil);
         }
     }
-}
