@@ -86,10 +86,9 @@ public class Modul1_202557201005 {
                     }
                 }
 
-                System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil);
-
+                
             }
-
+            System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil);
         }
     }
 }
