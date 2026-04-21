@@ -23,6 +23,7 @@ public class StringData {
          for (int a = 0; a < identitas.length; a++ ){
              System.out.println(identitas[a][0] + "\t" + identitas[a][1] + "\t" + identitas[a][2]);
              
+             
          }
       
      }
