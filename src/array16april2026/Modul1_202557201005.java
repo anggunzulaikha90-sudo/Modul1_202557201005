@@ -81,13 +81,7 @@ public class Modul1_202557201005 {
                 System.out.println();
             }
 
-            // Jumlah Kolom Ganjil
-//            int jumlahGanjil1 = 0;
-//            for (int a = 0; a < data.length; a++) {
-//                for (int b = 0; b < data[0].length; b++) {
-//                    
-//                }
-//            }
+            
             System.out.println("\nJumlah elemen pada kolom ganjil: " + jumlahGanjil1);                
             }
         }
